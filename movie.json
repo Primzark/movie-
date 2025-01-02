@@ -1,0 +1,62 @@
+[
+    {
+        "poster_path": "https://image.tmdb.org/t/p/w500/path_to_poster1.jpg",
+        "title": "Film 1",
+        "release_date": "2023-01-01",
+        "vote_average": 8.5
+    },
+    {
+        "poster_path": "https://image.tmdb.org/t/p/w500/path_to_poster2.jpg",
+        "title": "Film 2",
+        "release_date": "2023-02-01",
+        "vote_average": 7.0
+    },
+    {
+        "poster_path": "https://image.tmdb.org/t/p/w500/path_to_poster3.jpg",
+        "title": "Film 3",
+        "release_date": "2023-03-01",
+        "vote_average": 9.0
+    },
+    {
+        "poster_path": "https://image.tmdb.org/t/p/w500/path_to_poster4.jpg",
+        "title": "Film 4",
+        "release_date": "2023-04-01",
+        "vote_average": 8.0
+    },
+    {
+        "poster_path": "https://image.tmdb.org/t/p/w500/path_to_poster5.jpg",
+        "title": "Film 5",
+        "release_date": "2023-05-01",
+        "vote_average": 7.5
+    },
+    {
+        "poster_path": "https://image.tmdb.org/t/p/w500/path_to_poster6.jpg",
+        "title": "Film 6",
+        "release_date": "2023-06-01",
+        "vote_average": 8.8
+    },
+    {
+        "poster_path": "https://image.tmdb.org/t/p/w500/path_to_poster7.jpg",
+        "title": "Film 7",
+        "release_date": "2023-07-01",
+        "vote_average": 9.2
+    },
+    {
+        "poster_path": "https://image.tmdb.org/t/p/w500/path_to_poster8.jpg",
+        "title": "Film 8",
+        "release_date": "2023-08-01",
+        "vote_average": 7.8
+    },
+    {
+        "poster_path": "https://image.tmdb.org/t/p/w500/path_to_poster9.jpg",
+        "title": "Film 9",
+        "release_date": "2023-09-01",
+        "vote_average": 8.2
+    },
+    {
+        "poster_path": "https://image.tmdb.org/t/p/w500/path_to_poster10.jpg",
+        "title": "Film 10",
+        "release_date": "2023-10-01",
+        "vote_average": 9.5
+    }
+]
