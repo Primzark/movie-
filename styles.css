@@ -1,0 +1,77 @@
+/* Reset de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    font-size: 1rem; /* Base font size */
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  header h1 {
+    font-size: 2rem;
+  }
+  
+  /* Conteneur des films */
+  .films-grid {
+    display: grid;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  /* Style pour chaque film */
+  .film-card {
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .film-card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .film-info {
+    padding: 1rem;
+  }
+  
+  .film-info h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .film-info p {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .films-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (min-width: 601px) {
+    .films-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 901px) {
+    .films-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
