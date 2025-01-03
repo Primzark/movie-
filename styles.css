@@ -1,4 +1,4 @@
-/* Reset de base */
+
 * {
     margin: 0;
     padding: 0;
@@ -9,7 +9,7 @@
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     color: #333;
-    font-size: 1rem; /* Base font size */
+    font-size: 1rem; 
   }
   
   header {
@@ -23,14 +23,14 @@
     font-size: 2rem;
   }
   
-  /* Conteneur des films */
+  
   .films-grid {
     display: grid;
     gap: 1rem;
     padding: 1rem;
   }
   
-  /* Style pour chaque film */
+  
   .film-card {
     background-color: #fff;
     border-radius: 0.5rem;
@@ -57,7 +57,7 @@
     margin-bottom: 0.25rem;
   }
   
-  /* Responsive Design */
+  
   @media (max-width: 600px) {
     .films-grid {
       grid-template-columns: 1fr;
