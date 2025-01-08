@@ -1,22 +1,18 @@
-
-const jsonUrl = 'data.json';
-
+const apiKey = 'cc2b277c4ae3f78c456aef4691c0a1e0'; // Replace with your actual TMDB API key
+const jsonUrl = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`;
 
 async function loadFilms() {
   try {
-    
     const response = await fetch(jsonUrl);
     if (!response.ok) {
       throw new Error('Erreur lors du chargement des données');
     }
     const data = await response.json();
 
-    
     const filmsContainer = document.getElementById('films-container');
     filmsContainer.innerHTML = ''; 
 
     data.results.forEach(film => {
-      
       const filmCard = `
         <div class="film-card">
           <img src="https://image.tmdb.org/t/p/w500${film.poster_path}" alt="${film.title}">
@@ -27,14 +23,11 @@ async function loadFilms() {
           </div>
         </div>
       `;
-
-      
       filmsContainer.innerHTML += filmCard;
     });
   } catch (error) {
     console.error('Erreur:', error);
   }
 }
-
 
 loadFilms();
