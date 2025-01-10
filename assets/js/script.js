@@ -20,6 +20,7 @@ async function loadFilms() {
             <h2>${film.title}</h2>
             <p>Date de sortie: ${film.release_date}</p>
             <p>Note moyenne: ${film.vote_average}/10</p>
+            
           </div>
         </div>
       `;
