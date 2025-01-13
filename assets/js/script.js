@@ -1,4 +1,4 @@
-const apiKey = 'cc2b277c4ae3f78c456aef4691c0a1e0'; // Replace with your actual TMDB API key
+const apiKey = 'cc2b277c4ae3f78c456aef4691c0a1e0'; 
 const jsonUrl = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`;
 
 async function loadFilms() {

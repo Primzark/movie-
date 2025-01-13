@@ -26,7 +26,6 @@ header {
 
 #search-input {
   padding: 0.5rem;
-  border: 0.125rem solid #ccc;
   border-radius: 0.5rem;
   font-size: 1rem;
   width: 50%;
@@ -41,6 +40,8 @@ header {
   font-size: 1rem;
   cursor: pointer;
 }
+
+
 
 header h1 {
   font-size: 2rem;
