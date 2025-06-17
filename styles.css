@@ -52,7 +52,7 @@ header h1 {
   display: grid;
   gap: 1.25rem;
   padding: 1.25rem;
-  
+
 }
 
 .film-card {
@@ -65,7 +65,7 @@ header h1 {
 
 .film-card:hover {
   transform: translateY(-0.3rem);
-  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.2);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
 .film-card img {
