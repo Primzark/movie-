@@ -16,6 +16,7 @@ function loadFilms() {
       const featuredRelease = document.getElementById('featured-release');
       const featuredVote = document.getElementById('featured-vote');
       const featuredOverview = document.getElementById('featured-overview');
+      const featuredSection = document.getElementById('featured-section');
       const filmsContainer = document.getElementById('films-container');
       filmsContainer.innerHTML = '';
 
@@ -32,18 +33,25 @@ function loadFilms() {
         } else {
           featuredOverview.style.display = 'none';
         }
+        featuredSection.addEventListener('click', () => {
+          window.location.href = `movie.html?id=${featured.id}`;
+        });
       }
 
       // Create and insert one card per movie
       data.results.forEach(film => {
         const template = document.getElementById('film-template');
         const filmCard = template.content.cloneNode(true);
+        const cardElem = filmCard.querySelector('.film-card');
         const img = filmCard.querySelector('img');
         img.src = `https://image.tmdb.org/t/p/w500${film.poster_path}`;
         img.alt = film.title;
         filmCard.querySelector('h2').textContent = film.title;
         filmCard.querySelector('.release-date').textContent = `Date de sortie: ${film.release_date}`;
         filmCard.querySelector('.vote-average').textContent = `Note moyenne: ${film.vote_average}/10`;
+        cardElem.addEventListener('click', () => {
+          window.location.href = `movie.html?id=${film.id}`;
+        });
         filmsContainer.appendChild(filmCard);
       });
     })
