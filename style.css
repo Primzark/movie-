@@ -1,68 +1,104 @@
-/* GENERAL */
+/* General */
 body {
-    background-color: #f8f9fa;
-    font-family: "Segoe UI", sans-serif;
+    font-family: 'Plus Jakarta Sans', 'Noto Sans', sans-serif;
+    background-color: #ffffff;
+    color: #121417;
 }
 
-/* NAVBAR */
+header {
+    border-bottom: 1px solid #f1f2f4;
+}
+
 .navbar-brand {
-    font-weight: bold;
-    font-size: 1.5rem;
+    font-weight: 700;
+    font-size: 1.25rem;
 }
 
-/* SEARCH BAR */
-#search-input::placeholder {
-    color: #999;
+.nav-link {
+    color: #121417;
+    font-weight: 500;
 }
 
-#search-input:focus {
+.profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Search Bar */
+.search-container {
+    background-color: #f1f2f4;
+    border-radius: 0.75rem;
+    overflow: hidden;
+}
+
+.search-container input {
+    background-color: transparent;
+    border: none;
     box-shadow: none;
+}
+
+.search-container input:focus {
     outline: none;
+    box-shadow: none;
 }
 
-/* FEATURED MOVIE */
-.bg-gradient {
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+.search-container input::placeholder {
+    color: #677583;
 }
 
-#featured-poster {
-    height: 300px;
+/* Hero Banner */
+.hero-banner {
+    min-height: 20rem;
+    position: relative;
+    border-radius: 0.75rem;
+    overflow: hidden;
+}
+
+.hero-banner img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    border-radius: 8px;
 }
 
-#featured-title {
-    font-size: 1.8rem;
-    font-weight: 600;
+.hero-banner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0) 25%);
+    border-radius: inherit;
 }
 
-/* WEEKLY MOVIE LIST */
-#films-container img {
-    height: 220px;
+.hero-banner .content {
+    position: relative;
+    padding: 1rem;
+    z-index: 1;
+}
+
+.hero-banner h2,
+.hero-banner p {
+    color: #ffffff;
+}
+
+/* Movie Cards */
+.film-card img {
+    width: 100%;
+    aspect-ratio: 3 / 4;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 0.75rem;
 }
 
-#films-container p.title {
+.film-card h2 {
     font-size: 1rem;
     font-weight: 600;
+}
+
+.release-date,
+.vote-average {
+    font-size: 0.875rem;
+    color: #677583;
     margin-bottom: 0;
-}
-
-#films-container small {
-    font-size: 0.85rem;
-    color: #666;
-}
-
-/* TEMPLATE CARD SPACING */
-#films-container>div {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-}
-
-/* MEDIA QUERIES (Optional for fine tuning) */
-@media (max-width: 576px) {
-    #featured-title {
-        font-size: 1.4rem;
-    }
 }
