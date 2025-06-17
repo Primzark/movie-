@@ -102,3 +102,11 @@ header {
     color: #677583;
     margin-bottom: 0;
 }
+
+/* Details page */
+#trailer-container iframe {
+    width: 100%;
+    max-width: 560px;
+    border: none;
+    border-radius: 0.5rem;
+}
