@@ -14,18 +14,26 @@ function loadMovie() {
     const videosUrl = `https://api.themoviedb.org/3/movie/${movieId}/videos?api_key=${apiKey}`;
 
     Promise.all([
-        fetch(detailsUrl),
-        fetch(creditsUrl),
-        fetch(videosUrl)
-    ])
-        .then(async ([detailsRes, creditsRes, videosRes]) => {
-            if (!detailsRes.ok || !creditsRes.ok || !videosRes.ok) {
+        fetch(detailsUrl).then(res => {
+            if (!res.ok) {
                 throw new Error('Failed to load movie');
             }
-
-            const movie = await detailsRes.json();
-            const credits = await creditsRes.json();
-            const videos = await videosRes.json();
+            return res.json();
+        }),
+        fetch(creditsUrl).then(res => {
+            if (!res.ok) {
+                throw new Error('Failed to load movie');
+            }
+            return res.json();
+        }),
+        fetch(videosUrl).then(res => {
+            if (!res.ok) {
+                throw new Error('Failed to load movie');
+            }
+            return res.json();
+        })
+    ])
+        .then(([movie, credits, videos]) => {
 
             const poster = document.getElementById('detail-poster');
             const title = document.getElementById('detail-title');
