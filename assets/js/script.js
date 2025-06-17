@@ -18,12 +18,14 @@ function loadFilms() {
       // Crée et ajoute une carte pour chaque film retourné
       data.results.forEach(film => {
         const filmCard = `
-          <div class="film-card">
-            <img src="https://image.tmdb.org/t/p/w500${film.poster_path}" alt="${film.title}">
-            <div class="film-info">
-              <h2>${film.title}</h2>
-              <p>Date de sortie: ${film.release_date}</p>
-              <p>Note moyenne: ${film.vote_average}/10</p>
+          <div class="col">
+            <div class="film-card">
+              <img src="https://image.tmdb.org/t/p/w500${film.poster_path}" alt="${film.title}">
+              <div class="film-info">
+                <h2>${film.title}</h2>
+                <p>Date de sortie: ${film.release_date}</p>
+                <p>Note moyenne: ${film.vote_average}/10</p>
+              </div>
             </div>
           </div>
         `;
