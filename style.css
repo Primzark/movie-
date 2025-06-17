@@ -110,3 +110,15 @@ header {
     border: none;
     border-radius: 0.5rem;
 }
+
+/* Cast list */
+#cast-list {
+    gap: 1rem;
+}
+
+.cast-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+}
