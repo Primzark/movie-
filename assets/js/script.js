@@ -2,10 +2,9 @@ const apiKey = 'cc2b277c4ae3f78c456aef4691c0a1e0';
 const jsonUrl = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`;
 
 function loadFilms() {
-  // Récupère la liste des films populaires auprès de l'API TMDB
+  // Fetch the list of popular movies from TMDB
   fetch(jsonUrl)
     .then(response => {
-      // Vérifie que la requête s'est bien passée
       if (!response.ok) {
         throw new Error('Erreur lors du chargement des données');
       }
@@ -15,7 +14,7 @@ function loadFilms() {
       const filmsContainer = document.getElementById('films-container');
       filmsContainer.innerHTML = '';
 
-      // Crée et ajoute une carte pour chaque film retourné
+      // Create and insert one card per movie
       data.results.forEach(film => {
         const template = document.getElementById('film-template');
         const filmCard = template.content.cloneNode(true);
@@ -29,10 +28,9 @@ function loadFilms() {
       });
     })
     .catch(error => {
-      // Affiche les erreurs dans la console pour faciliter le debug
       console.error('Erreur:', error);
     });
 }
 
-// Lance le chargement des films lors de l'exécution du script
+// Run the function on page load
 loadFilms();

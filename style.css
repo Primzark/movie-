@@ -1,0 +1,48 @@
+body {
+    background-color: #f8f9fa;
+}
+
+header h1 {
+    font-weight: bold;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+#search-form input,
+#search-form button {
+    width: 100%;
+}
+
+.film-card {
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    transition: transform 0.2s;
+    background-color: #fff;
+}
+
+.film-card:hover {
+    transform: translateY(-4px);
+}
+
+.film-card img {
+    width: 100%;
+    height: auto;
+}
+
+.film-info {
+    padding: 1rem;
+}
+
+.film-info h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.film-info p {
+    margin-bottom: 0.3rem;
+    font-size: 0.95rem;
+    color: #555;
+}
