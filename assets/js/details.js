@@ -49,7 +49,23 @@ function loadMovie() {
             castList.innerHTML = '';
             credits.cast.slice(0, 5).forEach(member => {
                 const li = document.createElement('li');
-                li.textContent = `${member.name} as ${member.character}`;
+                li.classList.add('text-center');
+
+                const img = document.createElement('img');
+                if (member.profile_path) {
+                    img.src = `https://image.tmdb.org/t/p/w185${member.profile_path}`;
+                } else {
+                    img.src = '';
+                }
+                img.alt = member.name;
+                img.classList.add('cast-img', 'rounded-circle');
+
+                const name = document.createElement('p');
+                name.classList.add('small', 'mb-0');
+                name.textContent = member.name;
+
+                li.appendChild(img);
+                li.appendChild(name);
                 castList.appendChild(li);
             });
 
