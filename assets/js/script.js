@@ -11,8 +11,28 @@ function loadFilms() {
       return response.json();
     })
     .then(data => {
+      const featuredPoster = document.getElementById('featured-poster');
+      const featuredTitle = document.getElementById('featured-title');
+      const featuredRelease = document.getElementById('featured-release');
+      const featuredVote = document.getElementById('featured-vote');
+      const featuredOverview = document.getElementById('featured-overview');
       const filmsContainer = document.getElementById('films-container');
       filmsContainer.innerHTML = '';
+
+      const featured = data.results[0];
+      if (featured) {
+        featuredPoster.src = `https://image.tmdb.org/t/p/w500${featured.poster_path}`;
+        featuredPoster.alt = featured.title;
+        featuredTitle.textContent = featured.title;
+        featuredRelease.textContent = `Release date: ${featured.release_date}`;
+        featuredVote.textContent = `Average vote: ${featured.vote_average}/10`;
+        if (featured.overview) {
+          featuredOverview.textContent = featured.overview;
+          featuredOverview.style.display = '';
+        } else {
+          featuredOverview.style.display = 'none';
+        }
+      }
 
       // Create and insert one card per movie
       data.results.forEach(film => {

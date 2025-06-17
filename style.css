@@ -1,48 +1,68 @@
+/* GENERAL */
 body {
     background-color: #f8f9fa;
+    font-family: "Segoe UI", sans-serif;
 }
 
-header h1 {
+/* NAVBAR */
+.navbar-brand {
     font-weight: bold;
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 1rem;
+    font-size: 1.5rem;
 }
 
-#search-form input,
-#search-form button {
-    width: 100%;
+/* SEARCH BAR */
+#search-input::placeholder {
+    color: #999;
 }
 
-.film-card {
-    border: 1px solid #dee2e6;
+#search-input:focus {
+    box-shadow: none;
+    outline: none;
+}
+
+/* FEATURED MOVIE */
+.bg-gradient {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+}
+
+#featured-poster {
+    height: 300px;
+    object-fit: cover;
     border-radius: 8px;
-    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05);
-    overflow: hidden;
-    transition: transform 0.2s;
-    background-color: #fff;
 }
 
-.film-card:hover {
-    transform: translateY(-4px);
+#featured-title {
+    font-size: 1.8rem;
+    font-weight: 600;
 }
 
-.film-card img {
-    width: 100%;
-    height: auto;
+/* WEEKLY MOVIE LIST */
+#films-container img {
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
 }
 
-.film-info {
-    padding: 1rem;
+#films-container p.title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0;
 }
 
-.film-info h2 {
-    font-size: 1.25rem;
-    margin-bottom: 0.5rem;
+#films-container small {
+    font-size: 0.85rem;
+    color: #666;
 }
 
-.film-info p {
-    margin-bottom: 0.3rem;
-    font-size: 0.95rem;
-    color: #555;
+/* TEMPLATE CARD SPACING */
+#films-container>div {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+/* MEDIA QUERIES (Optional for fine tuning) */
+@media (max-width: 576px) {
+    #featured-title {
+        font-size: 1.4rem;
+    }
 }
