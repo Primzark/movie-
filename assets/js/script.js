@@ -41,8 +41,8 @@ function renderFilms(data) {
     img.src = `https://image.tmdb.org/t/p/w500${film.poster_path}`;
     img.alt = film.title;
     filmCard.querySelector('h2').textContent = film.title;
-    filmCard.querySelector('.release-date').textContent = `Date de sortie: ${film.release_date}`;
-    filmCard.querySelector('.vote-average').textContent = `Note moyenne: ${film.vote_average}/10`;
+    filmCard.querySelector('.release-date').textContent = `Release date: ${film.release_date}`;
+    filmCard.querySelector('.vote-average').textContent = `Average vote: ${film.vote_average}/10`;
     cardElem.onclick = () => {
       window.location.href = `movie.html?id=${film.id}`;
     };
