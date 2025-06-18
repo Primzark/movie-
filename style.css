@@ -1,4 +1,4 @@
-/* General */
+/* Général */
 body {
     font-family: 'Plus Jakarta Sans', 'Noto Sans', sans-serif;
     background-color: #ffffff;
@@ -26,7 +26,7 @@ header {
     object-fit: cover;
 }
 
-/* Search Bar */
+/* Barre de recherche */
 .search-container {
     background-color: #f1f2f4;
     border-radius: 0.75rem;
@@ -48,7 +48,7 @@ header {
     color: #677583;
 }
 
-/* Hero Banner */
+/* Bannière principale */
 .hero-banner {
     min-height: 20rem;
     position: relative;
@@ -83,7 +83,7 @@ header {
     color: #ffffff;
 }
 
-/* Movie Cards */
+/* Cartes de films */
 .film-card img {
     width: 100%;
     aspect-ratio: 3 / 4;
@@ -103,7 +103,7 @@ header {
     margin-bottom: 0;
 }
 
-/* Details page */
+/* Page de détails */
 #trailer-container iframe {
     width: 100%;
     max-width: 35rem;
@@ -111,7 +111,7 @@ header {
     border-radius: 0.5rem;
 }
 
-/* Cast list */
+/* Liste des acteurs */
 #cast-list {
     gap: 1rem;
 }
