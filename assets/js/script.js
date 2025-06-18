@@ -87,5 +87,5 @@ document.getElementById('search-form').addEventListener('submit', e => {
   }
 });
 
-// Run the function on page load
+// Exécuter la fonction au chargement de la page
 loadFilms();
